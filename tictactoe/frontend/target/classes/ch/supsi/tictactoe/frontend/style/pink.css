@@ -1,0 +1,8 @@
+Pane{
+    -fx-background-color: "#ffe0f7";
+}
+.button {
+    -fx-background-color: "#ffe0f7";
+    -fx-border-color: "#ff00d1";
+    -fx-text-fill: "#ff00d1";
+}

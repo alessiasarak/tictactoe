@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<Pane fx:controller="ch.supsi.tictactoe.frontend.interaction.TicTacToeInteraction" prefHeight="650.0" prefWidth="600.0" fx:id="pane"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+    <stylesheets>
+        <URL value="@style/default.css"/>
+    </stylesheets>
+
+    <!-- MENU -->
+    <MenuBar prefHeight="29.0" prefWidth="600.0">
+        <Menu mnemonicParsing="false" text="%ui.menu.file">
+            <MenuItem fx:id="miNew" mnemonicParsing="false" onAction="#newGame" text="%ui.menu.new"/>
+            <MenuItem fx:id="miOpen" mnemonicParsing="false" onAction="#openGame" text="%ui.menu.open"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem fx:id="miSave" mnemonicParsing="false" onAction="#saveGame" text="%ui.menu.save"/>
+            <MenuItem fx:id="miSaveAs" mnemonicParsing="false" onAction="#saveGameAs" text="%ui.menu.saveas"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem fx:id="miQuit" mnemonicParsing="false" onAction="#quit" text="%ui.menu.quit"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="%ui.menu.edit">
+            <Menu mnemonicParsing="false" text="%ui.menu.preferences">
+                <MenuItem fx:id="miSymbols" mnemonicParsing="false" onAction="#editSymbols" text="%ui.menu.apparence"/>
+                <MenuItem fx:id="miLanguage" mnemonicParsing="false" onAction="#editLanguage" text="%ui.menu.language"/>
+            </Menu>
+        </Menu>
+        <Menu mnemonicParsing="false" text="%ui.menu.help">
+            <MenuItem fx:id="miAbout" mnemonicParsing="false" onAction="#showAbout" text="%ui.menu.about"/>
+        </Menu>
+    </MenuBar>
+    <!-- END MENU -->
+
+    <!-- GRID -->
+    <Button fx:id="b00" alignment="CENTER" focusTraversable="false" layoutX="14.0" layoutY="43.0" styleClass="button"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER" >
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+    <Button fx:id="b01" alignment="CENTER" focusTraversable="false" layoutX="209.0" layoutY="43.0" styleClass="button"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+    <Button fx:id="b02" alignment="CENTER" focusTraversable="false" layoutX="404.0" layoutY="43.0" styleClass="button"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+    <Button fx:id="b10" alignment="CENTER" focusTraversable="false" layoutX="14.0" layoutY="238.0"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+    <Button fx:id="b11" alignment="CENTER" focusTraversable="false" layoutX="209.0" layoutY="238.0"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+    <Button fx:id="b12" alignment="CENTER" focusTraversable="false" layoutX="404.0" layoutY="238.0"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+    <Button fx:id="b20" alignment="CENTER" focusTraversable="false" layoutX="14.0" layoutY="433.0"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+    <Button fx:id="b21" alignment="CENTER" focusTraversable="false" layoutX="209.0" layoutY="433.0"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+    <Button fx:id="b22" alignment="CENTER" focusTraversable="false" layoutX="404.0" layoutY="433.0"
+            mnemonicParsing="false" onAction="#playerMove" prefHeight="182.0" prefWidth="182.0" textAlignment="CENTER">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <font>
+            <Font name="Comic Sans MS" size="84.0"/>
+        </font>
+    </Button>
+
+    <Text fx:id="infoGame" layoutX="14.0" layoutY="630.0">Gioco non ancora iniziato</Text>
+
+    <!-- END GRID -->
+</Pane>
